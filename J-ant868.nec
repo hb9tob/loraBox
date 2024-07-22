@@ -1,0 +1,22 @@
+CM  J-antenna 144MHz
+CE
+SY H=7.12	'Height above ground
+SY l1=0.0707, la=H+l1
+SY l2=0.2485, lb=H+l2
+SY d=0.0092, dd=H-d
+SY larg=0.01415
+GW	1	20	0	0	la	0	0	lb	.0015
+GW	2	10	0	0	la	0	0	H	.0015
+GW	3	1	0	0	H	0	0	dd	.0015
+GW	4	1	0	0	dd	0	larg	dd	.0015
+GW	5	1	0	larg	dd	0	larg	H	.0015
+GW	6	10	0	larg	H	0	larg	la	.0015
+GW	7	1	0	0	H	0	larg	H	.0015
+GE	1
+LD	5	0	0	0	24900000
+GN	2	0	0	0	13	0.005
+GD	2	0	0	0	0.0	0.0	0	0
+EK
+EX	0	7	1	0	1.0	0	0
+FR	0	0	0	0	869.5	0
+EN
